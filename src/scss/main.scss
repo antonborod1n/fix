@@ -1,0 +1,248 @@
+@import 'vars';
+/* Переменные */
+@import 'fonts';
+/* Шрифты */
+@import 'libs';
+/*библиотеки*/
+@import 'reset';
+/* Сброс */
+@import 'global';
+/* Глобальные стили */
+
+
+.header {}
+
+.header__inner {}
+
+.header__top {
+    background: #2A2A2A;
+    padding: 2px 0;
+
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-text {
+        font-size: 17px;
+        color: #FFFFFF;
+    }
+
+    &-link {
+        @extend %stem-300;
+        border-left: 1px solid rgba(255, 255, 255, .2);
+        padding: 0 0 0 15px;
+        margin-left: 15px;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.submenu {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-item+.submenu-item {
+        margin-left: 30px;
+    }
+
+    &-link {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        white-space: nowrap;
+        cursor: pointer;
+    }
+}
+
+.header__content {
+    padding: 30px;
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 10px #2A2A2A;
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+}
+
+.header__content-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+.header__content-cart {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.header__content-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    padding: 12px 20px 12px 45px;
+    width: 440px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    &::placeholder {
+        @extend %stem-300;
+        font-size: 13px;
+        line-height: 14px;
+        color: #adadad;
+    }
+}
+
+.header__content-title {
+    display: block;
+    @extend %stem-700;
+    margin-left: 21px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2A2A2A;
+}
+
+.header__content-subtitle,
+.header__content-email {
+    @extend %stem-500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #57575A;
+}
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {}
+
+    &__link {
+        font-size: 18px;
+        line-height: 25px;
+        color: #000000;
+
+        &-btn {
+            text-align: center;
+            color: #FFFFFF;
+            padding: 10px 81px;
+            color: #FFFFFF;
+            background: #BB0A07;
+            box-shadow: 0px 3px 6px #2A2A2A;
+            transition: all .3s;
+
+            &:hover {
+                transition: all .3s;
+                background-color: #2A2A2A;
+            }
+        }
+    }
+}
+
+
+
+
+/* FOOTER */
+
+.footer {}
+
+.footer__inner {}
+
+.footer__banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__banner-img {}
+
+.footer__banner-content {}
+
+.footer__banner-subtitle {}
+
+.footer__banner-title {}
+
+.footer__banner-text {}
+
+.footer__banner-box {}
+
+.footer__banner-item {}
+
+.footer__banner-email {}
+
+.footer__content {
+    background: #F5F5F5;
+}
+
+.footer__content-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__content-item {}
+
+.footer__content-title {}
+
+.footer__content-list {}
+
+.footer__content-link {
+    font-size: 14px;
+    line-height: 26px;
+    color: #2A2A2A;
+    transition: all .3s;
+
+    &:hover {
+        color: #BB0A07;
+        transition: all .3s;
+    }
+}
+
+.footer__form {}
+
+.footer__search {}
+
+.footer__search-btn {}
+
+.footer__copy {
+    display: flex;
+}
+
+.footer__copy-text {}
+
+.footer__copy-box {}
+
+.footer__copy-social {}
+
+.footer__copy-icon {}
+
+
+
+
+
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+@import 'media';

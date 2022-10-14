@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Stem-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Stem-Bold'),
+        url('../fonts/Stem-Bold.woff2') format('woff2'),
+        url('../fonts/Stem-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stem-Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Stem-Medium'),
+        url('../fonts/Stem-Medium.woff2') format('woff2'),
+        url('../fonts/Stem-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stem-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Stem-Regular'),
+        url('../fonts/Stem-Regular.woff2') format('woff2'),
+        url('../fonts/Stem-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stem-Light';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Stem-SemiLight'),
+        url('../fonts/Stem-Light.woff2') format('woff2'),
+        url('../fonts/Stem-Light.woff') format('woff');
+    font-display: swap;
+}

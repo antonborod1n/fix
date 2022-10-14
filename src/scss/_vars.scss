@@ -1,0 +1,64 @@
+/* COLOR */
+$accent: #ffd91c;
+$title: #1a1a1a;
+$text: #57575A;
+
+/* FONTS */
+%stem-700 {
+    font-family: 'Stem-Bold';
+    font-weight: 700;
+}
+
+%stem-500 {
+    font-family: 'Stem-Medium';
+    font-weight: 500;
+}
+
+%stem-400 {
+    font-family: 'Stem-Regular';
+    font-weight: 400;
+}
+
+%stem-300 {
+    font-family: 'Stem-Light';
+    font-weight: 300;
+}
+
+/* BUTTON */
+/* %btn {
+    position: relative;
+    padding: 12px 40px 12px 20px;
+    background-color: $accent;
+    border-radius: 100px;
+    @extend %montserrat-400;
+    font-size: 13px;
+    line-height: 40px;
+    color: $title;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        content: url(../images/icons/arrow-back-btn.svg);
+        top: 2px;
+        right: 16px;
+    }
+} */
+
+/* TITLE DECOR */
+/* %title {
+    position: relative;
+    @extend %montserrat-400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: $title;
+    &::after {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        content: "";
+        color: $accent;
+        top: 3px;
+        right: 20px;
+    } 
+} */
