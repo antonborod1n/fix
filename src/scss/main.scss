@@ -15,8 +15,8 @@
 .header__inner {}
 
 .header__top {
-    background: #2A2A2A;
-    padding: 2px 0;
+    background: linear-gradient(90deg, #2a2a2a, #4a4a4a);
+    padding: 12px 0;
 
     &-box {
         display: flex;
@@ -33,6 +33,7 @@
     &-text {
         font-size: 17px;
         color: #FFFFFF;
+        margin-left: 14px;
     }
 
     &-link {
@@ -40,8 +41,14 @@
         border-left: 1px solid rgba(255, 255, 255, .2);
         padding: 0 0 0 15px;
         margin-left: 15px;
-        font-size: 15px;
+        font-size: 17px;
         color: rgba(255, 255, 255, 0.7);
+        transition: all .3s;
+
+        &:hover {
+            color: #FFFFFF;
+            transition: all .3s;
+        }
     }
 }
 
@@ -57,10 +64,16 @@
     }
 
     &-link {
-        font-size: 13px;
+        font-size: 14px;
         color: rgba(255, 255, 255, 0.7);
         white-space: nowrap;
         cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            color: #FFFFFF;
+            transition: all .3s;
+        }
     }
 }
 
@@ -68,7 +81,7 @@
     padding: 30px;
     background: rgba(255, 255, 255, .7);
     backdrop-filter: blur(8px);
-    box-shadow: 0 1px 10px #2A2A2A;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 
     &-box {
         display: flex;
@@ -97,14 +110,25 @@
 .header__content-top {
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+.header__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .search {
+    position: relative;
     padding: 12px 20px 12px 45px;
     width: 440px;
     height: 46px;
     background: rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(0, 0, 0, 0);
+    outline: none;
+    transition: all .3s;
+
 
     &::placeholder {
         @extend %stem-300;
@@ -112,12 +136,26 @@
         line-height: 14px;
         color: #adadad;
     }
+
+    &:focus {
+        background-color: #fff;
+        border-color: transparent;
+        box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+        transition: all .3s;
+    }
+
+    &-icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 10;
+    }
 }
 
 .header__content-title {
     display: block;
     @extend %stem-700;
-    margin-left: 21px;
+    margin-left: 25px;
     font-size: 14px;
     line-height: 19px;
     color: #2A2A2A;
@@ -125,10 +163,14 @@
 
 .header__content-subtitle,
 .header__content-email {
-    @extend %stem-500;
+    @extend %stem-300;
     font-size: 13px;
     line-height: 18px;
     color: #57575A;
+}
+
+.header__content-item {
+    position: relative;
 }
 
 .menu {
@@ -145,18 +187,24 @@
         line-height: 25px;
         color: #000000;
 
+        &:hover {
+            color: $accent;
+            transition: all .3s;
+        }
+
         &-btn {
             text-align: center;
             color: #FFFFFF;
             padding: 10px 81px;
             color: #FFFFFF;
-            background: #BB0A07;
-            box-shadow: 0px 3px 6px #2A2A2A;
+            background: $accent;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
             transition: all .3s;
 
             &:hover {
                 transition: all .3s;
                 background-color: #2A2A2A;
+                color: #FFFFFF;
             }
         }
     }
@@ -193,7 +241,7 @@
 .footer__banner-title {
     font-size: 70px;
     line-height: 77px;
-    color: #BB0A07;
+    color: $accent;
     margin-bottom: 5px;
 }
 
@@ -269,17 +317,17 @@
 .footer__content-list {}
 
 .footer__content-link {
-
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
     color: #2A2A2A;
     transition: all .3s;
 
     &:hover {
-        color: #BB0A07;
+        color: $accent;
         transition: all .3s;
     }
 }
+
 
 .footer__form {
     display: flex;
@@ -317,7 +365,7 @@
 
     &:hover {
         transition: all .3s;
-        background-color: #BB0A07;
+        background-color: $accent;
     }
 }
 
