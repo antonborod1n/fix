@@ -24,18 +24,15 @@ body {
 }
 
 .arrow-up {
-    transition: 0.5s linear;
-    width: 50px;
-    height: 50px;
-    background-color: $accent;
+    transition: 0.5s cubic-bezier(.25, .8, .25, 1) 0s;
+    width: 46px;
+    height: 46px;
+    background-color: #fff;
     border-radius: 50%;
-    position: fixed;
-    z-index: 100;
-    bottom: -100px;
-    right: 10px;
     background-image: url(../images/arrow-up-min.svg);
     background-repeat: no-repeat;
     background-position: center center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
     &.arrow-up--active {
@@ -48,6 +45,52 @@ body {
     }
 }
 
+.title {
+    max-width: 1000px;
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: 1.94px;
+    color: $accent;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        @extend %stem-300;
+        margin-right: 27px;
+        font-size: 13px;
+        line-height: 22px;
+        color: $title;
+        cursor: pointer;
+
+        &::after {
+            content: "/";
+            position: absolute;
+            top: 0;
+            right: -15px;
+            color: #7D7D7D;
+        }
+
+        &:last-child::after {
+            color: #7d7d7d;
+            display: none;
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
+}
+
+
 /* .btn {
     position: relative;
     padding: 12px 40px 12px 20px;
@@ -58,15 +101,6 @@ body {
     line-height: 40px;
     color: #1a1a1a;
     cursor: pointer;
-}
-
-.title {
-    position: relative;
-    font-family: 'Montserrat-Regular';
-    font-size: 36px;
-    line-height: 40px;
-    text-align: center;
-    color: #1a1a1a;
 }
 
 .btn::after {
