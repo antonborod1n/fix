@@ -46,7 +46,6 @@ body {
 }
 
 .title {
-    max-width: 1000px;
     font-size: 70px;
     line-height: 80px;
     letter-spacing: 1.94px;
@@ -115,45 +114,6 @@ body {
 
     &:hover {
         transform: scale(1.1);
-    }
-}
-
-.breadcrumbs {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-
-    &__list {
-        display: flex;
-    }
-
-    &__item {
-        position: relative;
-        margin-right: 25px;
-        color: $text;
-        cursor: pointer;
-
-        &::after {
-            content: "";
-            position: absolute;
-            background-image: url(../images/icons/arrow-right.svg);
-            top: 5px;
-            right: -20px;
-            width: 15px;
-            height: 15px;
-        }
-
-        &:last-child::after {
-            display: none;
-        }
-    }
-
-    &__link {
-        color: inherit;
-
-        &:hover {
-            color: $title;
-        }
     }
 }
 
