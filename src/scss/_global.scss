@@ -24,14 +24,14 @@ body {
 }
 
 .arrow-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.5s cubic-bezier(.25, .8, .25, 1) 0s;
     width: 46px;
     height: 46px;
     background-color: #fff;
     border-radius: 50%;
-    background-image: url(../images/arrow-up-min.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
@@ -53,10 +53,6 @@ body {
 }
 
 .breadcrumbs {
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 40px;
-
     &__list {
         display: flex;
     }
